@@ -9,14 +9,14 @@ class Solution:
         
         if(root == None):
             return root
-        result = root
         
-        temp1 = root.right
+        
+       
         temp2 = root.left
-        root.left = temp1
+        root.left = root.right
         root.right = temp2
         self.invertTree(root.left)
         self.invertTree(root.right)
-        return result   
+        return root  
             
         
